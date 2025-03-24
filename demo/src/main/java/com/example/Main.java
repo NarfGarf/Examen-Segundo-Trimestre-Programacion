@@ -19,7 +19,7 @@ public class Main {
             try{
             int userChoice = ooo.nextInt();
             switch(userChoice){
-                case 1:
+                case 1://Creando un empleado y agregandolo a la lista
                     System.out.println("Dame estos parametros: ");
                     System.out.println("Nombre: ");
                     String nombreEmpleado = ooo.next();
@@ -31,7 +31,7 @@ public class Main {
                     parque.agregarEmpleado(empleado);
                     
                     break;
-                case 2:
+                case 2://Creando una atraccion y agregandola a la lista
                     System.out.println("Dame estos parametros: ");
                     System.out.println("Nombre: ");
                     String nombreAtraccion = ooo.next();
@@ -43,8 +43,7 @@ public class Main {
                     parque.agregarAtraccion(atraccion);
 
                     break;
-                case 3:
-                    
+                case 3://Creando un visitante y agregandolo a la lista
                     System.out.println("Dame estos parametros:");
                     System.out.println("Nombre:");
                     String nombreVisitante = ooo.next();
@@ -56,13 +55,14 @@ public class Main {
                     parque.agregarVisitante(visitante);
                     
                     break;
-                case 4:
+                case 4://Mostrar todas las listas de las clases
                     parque.mostrarInformacionParque();
                     break;
-                case 5:
+                case 5://Fin del programa
                     isDone = true;
                     break;
             }
+            // Si por ejemplo pones un String cuando te pide un int, será atrapado y el programa continuara
             }catch(InputMismatchException e){
                 System.out.println("Error: "+ e);
                 ooo.nextLine();

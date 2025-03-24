@@ -13,6 +13,12 @@ public class Atraccion {
         }
     }
 
+    
+    /** 
+     * Valida si el estado es uno de los tres estados validos (Operativa,En_Mantenimiento o Fuera_De_Servicio)
+     * @param estado
+     * @return boolean
+     */
     private boolean validarEstado(String estado){
         if(estado.equalsIgnoreCase("Operativa")||estado.equalsIgnoreCase("En_Mantenimiento")||estado.equalsIgnoreCase("Fuera_De_Servicio")){
             return true;
@@ -21,12 +27,24 @@ public class Atraccion {
             return false;
         }
     }
+    /**
+     * Simula el inicio de la Atraccion
+     */
     public void iniciarAtraccion(){
         System.out.println("Inicio de Atraccion!");
     }
+    /**
+     * Simula el fin de la Atraccion
+     */
     public void detenerAtraccion(){
         System.out.println("Fin de Atraccion!");
     }
+    
+    
+    /** 
+     * Si el estado es valido, lo cambia
+     * @param estado
+     */
     public void cambiarEstado(String estado){
         if (validarEstado(estado)){
             setEstado(estado);

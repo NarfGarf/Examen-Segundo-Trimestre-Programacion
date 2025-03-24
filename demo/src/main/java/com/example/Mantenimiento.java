@@ -13,14 +13,25 @@ public class Mantenimiento extends Empleado{
         }
         
     }
+    /**
+     * Simula la realizacion del mantenimiento
+     */
     public void realizarMantenimiento(){
         System.out.println("Mantenimiento realizado!");
     }
-    
+    /**
+     * Simula el reporte de un problema
+     */
     public void reportarProblema(){
         System.out.println("Problema reportado!");
     }
     
+    
+    /** 
+     * Valida que el area sea una de las tres areas validas (Mecanica,Electrica,Limpieza)
+     * @param area
+     * @return boolean
+     */
     private boolean validarAreaResponsable(String area){
         if(area.equalsIgnoreCase("Mecanica")||area.equalsIgnoreCase("Electrica")||area.equalsIgnoreCase("Limpieza")){
             return true;

@@ -13,6 +13,12 @@ public class Visitante {
         }
     }
 
+    
+    /** 
+     * Valida si la edad es positiva
+     * @param edad
+     * @return boolean
+     */
     private boolean validarEdad(int edad){
         if(edad>0){
             return true;
@@ -21,11 +27,15 @@ public class Visitante {
             return false;
         }
     }
-    
+    /**
+     * Simula una compra de una entrada
+     */
     public void comprarEntrada(){
         System.out.println("Entrada comprada!");
     }
-    
+    /**
+     * Simula el Visitante usando una atraccion
+     */
     public void usarAtraccion(){
         System.out.println("Atraccion usada!");
     }

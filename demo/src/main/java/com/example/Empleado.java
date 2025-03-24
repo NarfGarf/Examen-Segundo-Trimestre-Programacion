@@ -14,6 +14,11 @@ public class Empleado {
         } else{System.out.println("No se pudo crear el Empleado");}
     }
 
+    
+    /** 
+     * Se fija que la tarea esté vacia antes de asignar
+     * @param tarea
+     */
     public void asignarTarea(String tarea){
         if(this.tarea.isEmpty()){
             this.tarea = tarea;
@@ -21,10 +26,20 @@ public class Empleado {
             System.out.println("Error, ya hay una tarea asignada");
         }
     }
-    
+    /**
+     * Simula la realizacion de una tarea
+     * Deja vacio el atributo tarea para que se pueda asignar una tarea nueva
+     */
     public void realizarTarea(){
         this.tarea = "";
     }
+    
+    
+    /** 
+     * Valida si el puesto es uno de los tres puestos validos (Mantenimiento,Vendedor o Seguridad)
+     * @param puesto
+     * @return boolean
+     */
     private boolean validarPuesto(String puesto){
         if(puesto.equalsIgnoreCase("Mantenimiento")||puesto.equalsIgnoreCase("Vendedor")||puesto.equalsIgnoreCase("Seguridad")){
             return true;
@@ -33,6 +48,13 @@ public class Empleado {
             return false;
         }
     }
+    
+    
+    /** 
+     * Verifica que el id sea valido(mayor o igual a 0)
+     * @param id
+     * @return boolean
+     */
     private boolean validarId(int id){
         if(id>=0){
             return true;
